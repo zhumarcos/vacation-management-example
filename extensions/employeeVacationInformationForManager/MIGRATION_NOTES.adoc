@@ -1,0 +1,13 @@
+== Migration notes (May 22, 2024 at 3:08:47 PM COT)
+
+=== Additions
+
+* Declare `javax.servlet:javax.servlet-api` provided dependency.
+
+=== Updates
+
+* This project is now a Maven module, a parent artifact is now defined:
+** `project.build.sourceEncoding` property has been removed. This property is now inherited from the parent pom.
+** `bonita-runtime-bom` has been removed from `dependencyManagement`. It is now inherited from the parent pom.
+
+

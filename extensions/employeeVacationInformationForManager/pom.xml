@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+    <artifactId>vacation-management-example-extensions</artifactId>
+    <groupId>com.company</groupId>
+    <version>0.0.1</version>
+  </parent>
+	<artifactId>employeeVacationInformationForManager</artifactId>
+	<packaging>pom</packaging>
+	<name>Employee vacation information for manager REST API extension</name>
+
+	<build>
+
+		<finalName>vacationRestApiExtension</finalName>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/assembly/description.xml</descriptor>
+					</descriptors>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+				<executions>
+					<execution>
+						<id>create-archive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>
